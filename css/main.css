@@ -1,0 +1,90 @@
+body, html{
+	height: 100%;
+	background-color: white;
+}
+
+.bg {
+	height: 100%;
+	max-height: document.window.height;
+	background-image: url(../images/tree.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: black;
+}
+
+.blueB {
+	background-color: blue;
+}
+.activeD {
+	display: inherit;
+}
+
+.nonActive {
+	display: none;
+}
+
+.box {
+	background: rgba(211, 211, 211, 0.4);
+	margin: 3px;
+}
+
+.pop-box {
+	text-align: center;
+}
+
+.hText {
+	white-space: pre-line;
+}
+
+.history {
+	text-align: center;
+}
+
+.greenbox {
+	background: rgba(76, 175, 80, 0.6);
+}
+
+#aboutMeTabs {
+	padding-right:20px;
+}
+
+#eyePic {
+	height:100%;
+	width: auto;
+}
+
+
+#jumbotron1 {
+	opacity :.9;
+	margin-top:50px;
+}
+
+.modal-content, .modal-header, .modal-body {
+	background: rgba(211, 211, 211, 0.9);
+
+}
+
+#modalBtn {
+	margin-right:5px;
+}
+
+.modal {
+	background: rgba(211, 211, 211, 0.1);
+	overflow: auto;
+}
+
+#emailMe, #callMe {
+	color: darkblue;
+}
+
+#gameDiv {
+	width: document.window.width;
+	height: 150px;
+	margin: auto;
+	display: flex;
+	resize: both;
+	overflow: auto;
+	text-align: center;
+	vertical-align:top;
+}

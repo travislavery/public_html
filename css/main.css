@@ -88,3 +88,26 @@ body, html{
 	text-align: center;
 	vertical-align:top;
 }
+
+#follower {
+	position: absolute;
+}
+
+.corgiSprite{
+	width: 172px;
+	height: 150px;
+}
+
+#corgF2 {
+	background: url(../images/corgi1.png) 0 0;
+}
+
+
+
+.corgi3 {
+	background: url(../images/corgi1.png) 0 0;
+}
+
+.corgi4 {
+	background: url(../images/corgi1.png) -172px 0;
+}

@@ -5,14 +5,17 @@ body, html{
 
 .bg {
 	height: 100%;
-	max-height: document.window.height;
 	background-image: url(../images/tree.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: auto;
+	overflow: auto;
 	color: black;
 }
 
+#moreAboutMeDiv {
+	margin: 40px;
+}
 .blueB {
 	background-color: blue;
 }
@@ -78,18 +81,7 @@ body, html{
 	color: darkblue;
 }
 
-#gameDiv {
-	width: document.window.width;
-	height: 150px;
-	margin: auto;
-	display: flex;
-	resize: both;
-	overflow: auto;
-	text-align: center;
-	vertical-align:top;
-}
-
-#follower {
+.follow {
 	position: absolute;
 }
 
@@ -99,7 +91,7 @@ body, html{
 }
 
 #corgF2 {
-	background: url(../images/corgi1.png) 0 0;
+	background: url(../images/corgi1.png) -172px 0;
 }
 
 
@@ -110,4 +102,8 @@ body, html{
 
 .corgi4 {
 	background: url(../images/corgi1.png) -172px 0;
+}
+
+.corgi5 {
+	background: url(../images/corgi1.png) -344px 0;
 }

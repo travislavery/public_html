@@ -41,13 +41,15 @@
             <li class='option' value="#experienceDiv"><a href='#'>History</a></li>
             <li class='option' value="#resumeDiv"><a href='#'>Resume</a></li>
           </ul>
+          <button id="mouseBtn" type="button" class="btn btn-md btn-default navbar-btn navbar-right hidden-xs" data-target="#follower">Toggle Follower
+          </button>
           <button id="modalBtn" type="button" class="btn btn-md btn-default navbar-btn navbar-right" data-target="#contactDiv">Contact
           </button>
         </div>
       </div>
     </nav>
     <div class="bg">
-    <div id="follower">
+    <div id="follower" class="follow hidden-xs container-fluid">
     	<div class="corgiSprite corgi3" id="corgF2"></div>
     </div>
     <div id="pageBody">
@@ -69,10 +71,10 @@
       		</div>
       	</div>
       </div>
-      <div id="moreAboutMeDiv" class='nonActive well box'>
+      <div id="moreAboutMeDiv" class='nonActive box container-fluid'>
         <div class="container">
           <div class="container">
-          <div id="aboutMeTabs" class="col-md-pull-1 col-md-4">
+          <div id="aboutMeTabs" class="col-md-4">
             <ul class="nav nav-pills nav-stacked list-group">
               <li class='active' value="#section1"><a href="#" class="list-group-item">
                 <h4 class="list-group-item-heading"><em>Text Editor</em></h4>
@@ -86,10 +88,26 @@
                  <h4 class="list-group-item-heading"><em>Books</em></h4>
                 <p class="list-group-item-text">Finished, and in progress</p>
               </a></li>
+              <li value="#section3"><a href="#" class="list-group-item">
+                 <h4 class="list-group-item-heading"><em>Books</em></h4>
+                <p class="list-group-item-text">Finished, and in progress</p>
+              </a></li>
+              <li value="#section3"><a href="#" class="list-group-item">
+                 <h4 class="list-group-item-heading"><em>Books</em></h4>
+                <p class="list-group-item-text">Finished, and in progress</p>
+              </a></li>
             </ul>
           </div>
           <div id="infoArea" class="col-md-8 well container greenbox">
-		  <div id="section1" class="col-md-8 activeP"><h3>I currently use Sublime text, however I'm slowly making the conversion to VIM. Still getting the hang of it, but I feel once I've got all of the shortcuts figured out, it will help to make a much more efficient work space.</h3></div>
+		  <div id="section1" class="col-md-12 activeP media">
+		  	<div class="media-left media-bottom"><img src="images/sublime.jpg" height="100px" width="100px" class="media-object" alt="Sublime Logo"></div>
+		  	
+		  	<div class="media-body">
+		  		<h2 class="media-heading text-center">Text editor of Choice</h2>
+		  		<h3 class="text-center">I currently use Sublime text, however I'm slowly making the conversion to VIM. Still getting the hang of it, but I feel once I've got all of the shortcuts figured out, it will help to make a much more efficient work space.</h3>
+		  	</div>
+		  	<div class="media-right media-bottom"><img src="images/Vim.jpg" height="100px" width="100px" class="media-object" alt="Vim Logo"></div>
+		   </div>
             <div id="section2" class="col-md-8 nonActive">Heyo</div>
             <div id="section3" class="col-md-8 nonActive">
               <div id="bookDiv">
@@ -121,8 +139,8 @@
       <div id="experienceDiv" class='nonActive'>
       	<div class="container">
       		<div class="box pop-box well">
-      			<h1 class="hidden-xs">A brief, or detailed, recount of the last 9 months.</h1>
-      			<h3 class="visible-xs-block">A brief, or detailed, recount of the last 9 months.</h3>
+      			<h1 class="hidden-xs">The last 9 months.</h1>
+      			<h3 class="visible-xs-block">The last 9 months.</h3>
       		</div>
       	</div>
         <div class="center-block pop-box">
@@ -187,7 +205,7 @@
 	        		<div class="thumbnail box">
 	        			<p>7. nodeJS</p>
 	        			<p class="hidden-xs">Currently learning</p>
-	        			<p id="hText8" class="hText hidden">Most recently I’ve been learning nodeJS more fully, and it has been great. When I am coding in just normal javascript I catch myself trying to do things that I can do with node easily, but that require a bit of research and a module or two to get to work in the web browser environment. I also recently got to figure out how to use a server to host my website, which was very educational. </p>
+	        			<p id="hText8" class="hText hidden">Most recently I’ve been learning nodeJS more fully, and it has been great. When I am coding in just normal javascript I catch myself trying to do things that I can do with node easily, but that require a bit of research and a module or two to get to work in the web browser environment. I also recently got to figure out how to use a server to host my website, which was very educational. I've also been experimenting with Postman and API's.</p>
 	        		</div>
 	    	    	</button>
 	    	    </div>
@@ -291,8 +309,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src='./js/main.js'></script>
     <script src="./js/bootstrap.js"></script>
-
-    
+    <script src="./js/mouseFollow.js"></script>
   </body>
 
 </html>

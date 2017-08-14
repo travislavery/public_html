@@ -13,9 +13,10 @@ body, html{
 	color: black;
 }
 
-#moreAboutMeDiv {
-	margin: 40px;
+#pageBody {
+	margin-top: 80px;
 }
+
 .blueB {
 	background-color: blue;
 }
@@ -83,27 +84,11 @@ body, html{
 
 .follow {
 	position: absolute;
-}
-
-.corgiSprite{
-	width: 172px;
+	display: flex;
+	background: url(../images/corgi1.png) -202px 0;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	width: 80px;
 	height: 150px;
-}
-
-#corgF2 {
-	background: url(../images/corgi1.png) -172px 0;
-}
-
-
-
-.corgi3 {
-	background: url(../images/corgi1.png) 0 0;
-}
-
-.corgi4 {
-	background: url(../images/corgi1.png) -172px 0;
-}
-
-.corgi5 {
-	background: url(../images/corgi1.png) -344px 0;
 }

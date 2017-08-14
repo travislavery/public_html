@@ -17,7 +17,6 @@ var navBar = (function(){
 	}
 
 	function swapNavTab() {
-		console.log($navTabs)
 		$activeTab.removeClass('active');
 		var $valInfo = $(this).attr('value');
 		$(this).addClass('active');
@@ -41,6 +40,17 @@ var navBar = (function(){
         		$('#navBtn1').click();
         	}
 		})
+	}
+})()
+
+var overview= (function(){
+	var $xClose = $('.close1');
+
+	$xClose.on('click', closeMessage)
+
+	function closeMessage() {
+		var curr= $(event.target).closest('.panel');
+		curr.addClass('hidden');
 	}
 })()
 
@@ -68,10 +78,8 @@ var moreAboutMe= (function(){
 
 	function swapBody($active, $area, val) {
 		var $target = $area.find(val);
-		$active.toggleClass('activeP');
-		$active.fadeToggle('fast');
-		$target.toggleClass('activeP');
-		$target.fadeToggle('fast');
+		$active.toggleClass('activeP hidden');
+		$target.toggleClass('activeP hidden');
 	}
 })()
 
@@ -108,7 +116,7 @@ var contactMe= (function(){
 		$cDiv.addClass('show');
 	}
 	function closeModal() {
-		$current= $(event.target).closest('.modal')
+		$current= $(event.target).closest('.modal');
 		$current.removeClass('show');
 	}
 	function messageGo() {

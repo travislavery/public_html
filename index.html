@@ -17,7 +17,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link href='css/main.css' rel='stylesheet'>
-    
   </head>
   <body>
     <nav id='navBar1' role='navigation' class='navbar navbar-default navbar-fixed-top'>
@@ -30,7 +29,7 @@
           <span class="icon-bar"></span>
           </button>
           <a href="#" class="navbar-brand">
-          <img src="images/eye.jpg" id="eyePic">
+          <img src="images/thumbnails/tn_eye.jpg" id="eyePic">
           </a>
           <p class="navbar-text"><strong>Travis Lavery</strong></p>
         </div>
@@ -49,29 +48,22 @@
       </div>
     </nav>
     <div class="bg">
-    <div id="follower" class="follow hidden-xs container-fluid">
-    	<div class="corgiSprite corgi3" id="corgF2"></div>
-    </div>
+    <div id="follower" class="follow hidden-xs"></div>
     <div id="pageBody">
-      <div class="">
-        <div id='jumbotron1' class='overview justified'>
-          <div class="container">
-            <h1 class="">Travis Lavery</h1>
-            <p class="">Lets get this to look good shall we? Yes Please</p>
-          </div>
-        </div>
-      </div>
     <div class="">
       <div id='overviewDiv' class='activeD box'>
       	<div class="container col-md-12">
       		<div class="panel panel-default box col-md-5 col-md-push-3">
       			<div class="panel-body">
+      				<button type="button" class="close1 pull-right" data-dismiss="panel" aria-label="Close">
+      					<span aria-hidden="true">&times;</span>
+      				</button>
       				<h3>Welcome! This site is as an area where you can check out some of the projects I’ve been working on. It also serves as a window into the skills and languages that I’ve learned over the past 9 months, as I’ve been teaching myself code. I really enjoy the smooth feeling of a one-page website, so I’ve done my best to create one. Enjoy!</h3>
       			</div>
       		</div>
       	</div>
       </div>
-      <div id="moreAboutMeDiv" class='nonActive box container-fluid'>
+      <div id="moreAboutMeDiv" class='nonActive container-fluid'>
         <div class="container">
           <div class="container">
           <div id="aboutMeTabs" class="col-md-4">
@@ -82,19 +74,19 @@
               </a></li>
               <li value="#section2"><a href="#" class="list-group-item">
                 <h4 class="list-group-item-heading"><em>GitHub</em></h4>
-                <p class="list-group-item-text">blablabla</p>
+                <p class="list-group-item-text">A link to my GitHub</p>
               </a></li>
               <li value="#section3"><a href="#" class="list-group-item">
                  <h4 class="list-group-item-heading"><em>Books</em></h4>
                 <p class="list-group-item-text">Finished, and in progress</p>
               </a></li>
-              <li value="#section3"><a href="#" class="list-group-item">
-                 <h4 class="list-group-item-heading"><em>Books</em></h4>
-                <p class="list-group-item-text">Finished, and in progress</p>
+              <li value="#section4"><a href="#" class="list-group-item">
+                 <h4 class="list-group-item-heading"><em>Coming Soon</em></h4>
+                <p class="list-group-item-text">Projects I plan on</p>
               </a></li>
-              <li value="#section3"><a href="#" class="list-group-item">
-                 <h4 class="list-group-item-heading"><em>Books</em></h4>
-                <p class="list-group-item-text">Finished, and in progress</p>
+              <li value="#section5"><a href="#" class="list-group-item">
+                 <h4 class="list-group-item-heading"><em>More</em></h4>
+                <p class="list-group-item-text">A bit about me</p>
               </a></li>
             </ul>
           </div>
@@ -108,8 +100,8 @@
 		  	</div>
 		  	<div class="media-right media-bottom"><img src="images/Vim.jpg" height="100px" width="100px" class="media-object" alt="Vim Logo"></div>
 		   </div>
-            <div id="section2" class="col-md-8 nonActive">Heyo</div>
-            <div id="section3" class="col-md-8 nonActive">
+            <div id="section2" class="col-md-12 hidden"><a href='https://github.com/travislavery' target='_blank'><img src="images/github.png"><h3>My GitHub</h3></a></div>
+            <div id="section3" class="col-md-12 hidden">
               <div id="bookDiv">
                 <h3 class="hidden-xs"><strong>Currently reading...</strong></h3>
                 <h4 class="visible-xs-block"><strong>Currently reading...</strong></h4>
@@ -131,6 +123,28 @@
                 </div>
                 </div>
               </div>
+              <div id="section4" class='col-md-12 hidden'>
+              	<h1>Future Projects</h1>
+              	<ul class="list-group">
+              		<li class="list-group-item box">
+              			<h3 class="list-group-item-heading">Contact me Message</h3>
+              			<h3 class="list-group-item-text">Allow people to leave me a message here on the site.</h3>
+              		</li>
+              		<li class="list-group-item box">
+              			<h3 class="list-group-item-heading">Quote Puller</h3>
+              			<h3 class="list-group-item-text">Have a quote puller that chooses a random quote from a website, then formats and puts it on the Overview page.</h3>
+              		</li>
+              		<li class="list-group-item box">
+              		<h3 class="list-group-item-heading">Embed games</h3>
+              			<h3 class="list-group-item-text">Figure out how to embed my Phaser.io games into my website.</h3>
+              		</li>
+              	</ul>
+              </div>
+              <div id="section5" class="col-md-12 hidden">
+              	<h1>Who am I?</h1>
+              	<p>I am a 23 year old, who loves to code. I also enjoy a good game of Rocket League, and spending time with my family. Last year, I bought my first house, and spend a good bit of time doing yardwork and dealing with all those little things that come with owning a house.</p>
+              	<p></p>
+              </div>
             </div>
           </div>
           </div>
@@ -138,9 +152,9 @@
       </div>
       <div id="experienceDiv" class='nonActive'>
       	<div class="container">
-      		<div class="box pop-box well">
-      			<h1 class="hidden-xs">The last 9 months.</h1>
-      			<h3 class="visible-xs-block">The last 9 months.</h3>
+      		<div class="pop-box">
+      			<h1 class="hidden-xs">Timeline</h1>
+      			<h3 class="visible-xs-block">Timeline</h3>
       		</div>
       	</div>
         <div class="center-block pop-box">
@@ -222,7 +236,11 @@
         </div>
       </div>
       <div id="resumeDiv" class='nonActive box'>
-        <p>resume</p>
+      	<div class="">
+      		<div class="text-center col-sm-12">
+      			<iframe src="resume/travisResume.pdf#view=Fit" margin="0" padding="0" width="600px" height="800px"></iframe>
+      		</div>
+      	</div>
       </div>
       <div id="contactDiv" class='nonActive box modal' tabindex="-1" role="dialog" aria-labelledby="contactMe" aria-hidden="true">
         <div class="modal-dialog modal-md">
@@ -259,6 +277,7 @@
       			</div>
       			<div class="modal-body">
       				<div class="container-fluid">
+      				<img class="text-center" src="images/under-construction.jpg" height='150px' width='150px'>
       					<form action="mailto:travisalavery@gmail.com" method="post" enctype="text/plain" class="form-horizontal" id="contactForm">
       					<div class="form-group">
       						<label for="fullName" class="control-label col-sm-3">Your Name</label>
@@ -310,6 +329,7 @@
     <script src='./js/main.js'></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/mouseFollow.js"></script>
+    <script src="./js/interactiveRoots.js"></script>
   </body>
 
 </html>

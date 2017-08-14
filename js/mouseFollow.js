@@ -1,11 +1,5 @@
 var mouseAnimation=(function(){
 	var $corgi = $('#corgF3');
-	var defCorg = "url('../images/corgi1.png') ";
-	var down = " 0"
-	var left = " -150px";
-	var right = " -300px"
-	var up = " -450px"
-	var i = -172;
 	var mouseX = 0, mouseY = 0;
 	$(document).mousemove(function(e){ 
 		mouseX = e.pageX;
@@ -16,7 +10,6 @@ var mouseAnimation=(function(){
 	var $fBtn = $('#mouseBtn');
 	var xp = 0, yp = 0;
 	var loop = setInterval(followCorg, 30);
-	//var loop2 = setInterval(tryhard, 500);
 
 	$fBtn.on('click', toggleFollow);
 
@@ -28,10 +21,9 @@ var mouseAnimation=(function(){
 	function followCorg() {
 		xp += (mouseX - xp) / 12;
 		yp += (mouseY - yp) / 12;
-		$follower.css({left:xp, top:yp});
-		//if(mouseX > mouseY)
+		$follower.css({left:xp-25, top:yp});
 	}
-	function tryhard() {
+	/*function tryhard() {
 		$corgi.css('background', defCorg+'-172px'+left);
 		$corgi.css('background', defCorg+'-344px'+left);
 		
@@ -45,7 +37,7 @@ var mouseAnimation=(function(){
 		//$corgi.css('background', defCorg+(i*2)+'px'+left);
 	}
 
-	/*function swapSpriteTile(dir) {
+	function swapSpriteTile(dir) {
 		if (dir === "left") {
 			//play animation L1-L3
 			$corgi.css('background', defCorg+(i)+'px'+left);

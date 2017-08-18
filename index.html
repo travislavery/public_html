@@ -47,21 +47,41 @@
         </div>
       </div>
     </nav>
-    <div class="bg">
+    <div id="bg">
+    <div id="backgroundPics" class="carousel slide carousel-fade" data-interval="10000" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class='item active' src="../images/bike.jpg"></div>
+        <div class='item' src="../images/traintrack.jpg"></div>
+        <div class='item' src="../images/tree.png"></div>
+        <figure class="item active" src="../images/bike.jpg">
+          <img src="images/bike.jpg" alt="bike" class="center-block carouselPic">
+          <figcaption class="right carousel-caption">Catalina Island</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="images/traintrack.jpg" alt="traintrack" class="center-block carouselPic">
+          <figcaption class="right carousel-caption">Arches National Park</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="images/tree.png" alt="traintrack" class="center-block carouselPic">
+          <figcaption class="right carousel-caption">Tree in Salt Lake City</figcaption>
+        </figure>
+      </div>
+    </div>
     <div id="follower" class="follow hidden-xs"></div>
     <div id="pageBody">
     <div class="">
       <div id='overviewDiv' class='activeD box'>
       	<div class="container col-md-12">
-      		<div class="panel panel-default box col-md-5 col-md-push-3">
+      		<div id='box1' class="panel panel-default box col-md-5 col-md-push-3">
       			<div class="panel-body">
       				<button type="button" class="close1 pull-right" data-dismiss="panel" aria-label="Close">
       					<span aria-hidden="true">&times;</span>
       				</button>
-      				<h3>Welcome! This site is as an area where you can check out some of the projects I’ve been working on. It also serves as a window into the skills and languages that I’ve learned over the past 9 months, as I’ve been teaching myself code. I really enjoy the smooth feeling of a one-page website, so I’ve done my best to create one. Enjoy!</h3>
+      				<h3 id="welcomeMemo">Welcome! This site is as an area where you can check out some of the projects I’ve been working on. It also serves as a window into the skills and languages that I’ve learned over the past 9 months, as I’ve been teaching myself code. I really enjoy the smooth feeling of a one-page website, so I’ve done my best to create one. Enjoy!</h3>
       			</div>
       		</div>
       	</div>
+        <div><img class="text-center" src="images/under-construction.jpg" height='150px' width='150px'></div>
       </div>
       <div id="moreAboutMeDiv" class='nonActive container-fluid'>
         <div class="container">
@@ -92,15 +112,17 @@
           </div>
           <div id="infoArea" class="col-md-8 well container greenbox">
 		  <div id="section1" class="col-md-12 activeP media">
-		  	<div class="media-left media-bottom"><img src="images/sublime.jpg" height="100px" width="100px" class="media-object" alt="Sublime Logo"></div>
+		  	<div class="media-left media-bottom hidden-xs"><img src="images/sublime.jpg" height="100px" width="100px" class="media-object" alt="Sublime Logo"></div>
 		  	
 		  	<div class="media-body">
 		  		<h2 class="media-heading text-center">Text editor of Choice</h2>
 		  		<h3 class="text-center">I currently use Sublime text, however I'm slowly making the conversion to VIM. Still getting the hang of it, but I feel once I've got all of the shortcuts figured out, it will help to make a much more efficient work space.</h3>
 		  	</div>
-		  	<div class="media-right media-bottom"><img src="images/Vim.jpg" height="100px" width="100px" class="media-object" alt="Vim Logo"></div>
-		   </div>
-            <div id="section2" class="col-md-12 hidden"><a href='https://github.com/travislavery' target='_blank'><img src="images/github.png"><h3>My GitHub</h3></a></div>
+
+		  	<div class="media-right media-bottom hidden-xs"><img src="images/Vim.jpg" class="media-object" alt="Vim Logo" height="100px" width="100px">
+		    </div>
+        </div>
+            <div id="section2" class="col-md-12 hidden"><a href='https://github.com/travislavery' target='_blank'><img class='img-responsive'src="images/github.png"><h3>My GitHub</h3></a></div>
             <div id="section3" class="col-md-12 hidden">
               <div id="bookDiv">
                 <h3 class="hidden-xs"><strong>Currently reading...</strong></h3>
@@ -142,7 +164,7 @@
               </div>
               <div id="section5" class="col-md-12 hidden">
               	<h1>Who am I?</h1>
-              	<p>I am a 23 year old, who loves to code. I also enjoy a good game of Rocket League, and spending time with my family. Last year, I bought my first house, and spend a good bit of time doing yardwork and dealing with all those little things that come with owning a house.</p>
+              	<h3>I am a 23 year old who loves to code and learn. I also enjoy a good game of Rocket League, and spending time with my family (my fiance, my corgi Ood, and my bullmastiff HarleyQuinn). This summer we've gone up hiking and camping at Mirror Lake, Mill-creek canyon and Moab. Last year I bought my first house, and spend a good bit of time doing yardwork and dealing with all those little things that come with owning a house.</h3>
               	<p></p>
               </div>
             </div>
@@ -238,7 +260,7 @@
       <div id="resumeDiv" class='nonActive box'>
       	<div class="">
       		<div class="text-center col-sm-12">
-      			<iframe src="resume/travisResume.pdf#view=Fit" margin="0" padding="0" width="600px" height="800px"></iframe>
+      			<iframe src="http://docs.google.com/gview?url=http://travislavery.com/resume/TravisResume.pdf&embedded=true" style="width:600px; height:700px;" frameborder="0"></iframe>
       		</div>
       	</div>
       </div>
@@ -318,7 +340,6 @@
       		</div>
       	</div>
       </div>
-    </div>
     </div>
     </div>
   </body>

@@ -1,3 +1,24 @@
+var background = (function(){
+	var $backCarousel = $('#backgroundPics');
+	$backCarousel.on('slid.bs.carousel', changeBackground);
+	$backCarousel.on('slide.bs.carousel', animateChange);
+	function changeBackground(){
+		var $activePic = $backCarousel.find('.active');
+		var $source = $activePic.attr('src')
+		$('#bg').css({
+			'backgroundImage': 'url('+$source +')',
+			'backgroundRepeat': 'no-repeat',
+			'backgroundPosition': 'top center',
+			'background-size': 'auto',
+			'overflow': 'auto',
+			'color': 'black',
+			'height': '100%'
+		});
+	}
+	changeBackground();
+
+})()
+
 var navBar = (function(){
 	var $navB = $('#navBar1');
 	var $ul = $navB.find('ul');

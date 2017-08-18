@@ -1,25 +1,51 @@
 body, html{
 	height: 100%;
-	background-color: white;
+	background-color: black;
 }
 
-.bg {
-	height: 100%;
-	background-image: url(../images/tree.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: auto;
-	overflow: auto;
-	color: black;
+@keyframes fadeIn {
+	0% {opacity:0;}
+	1% {opacity:.33;}
+	2% {opacity:.66;}
+	3% {opacity: 1;}
+	31%{opacity:.66;}
+	32%{opacity:.33;}
+	33%{opacity:0;}
+	34% {opacity:.33;}
+	35% {opacity:.66;}
+	36% {opacity: 1;}
+	64%{opacity:.66;}
+	65%{opacity:.33;}
+	66%{opacity:0;}
+	67% {opacity:.33;}
+	68% {opacity:.66;}
+	69% {opacity: 1;}
+	98%{opacity:.66;}
+	99%{opacity:.33;}
+	100% {opacity:0;}
+}
+
+#bg{
+	animation-name: fadeIn;
+	animation-duration: 35s;
+	animation-direction: alternate;
+	animation-iteration-count:infinite;
+	animation-timing-function: linear;
 }
 
 #pageBody {
-	margin-top: 80px;
+	margin-top: 0;
+	padding-top: 80px;
+}
+
+#welcomeMemo {
+	color: black;
 }
 
 .blueB {
 	background-color: blue;
 }
+
 .activeD {
 	display: inherit;
 }
@@ -31,6 +57,10 @@ body, html{
 .box {
 	background: rgba(211, 211, 211, 0.4);
 	margin: 3px;
+}
+
+#box1 {
+	background: rgba(211, 211, 211, 0.9);
 }
 
 .pop-box {
@@ -46,7 +76,7 @@ body, html{
 }
 
 .greenbox {
-	background: rgba(76, 175, 80, 0.6);
+	background: rgba(63, 127, 191, 0.9);
 }
 
 #aboutMeTabs {
@@ -58,10 +88,9 @@ body, html{
 	width: auto;
 }
 
-
-#jumbotron1 {
-	opacity :.9;
-	margin-top:50px;
+.editorPic {
+	height: 100px;
+	width: 100px;
 }
 
 .modal-content, .modal-header, .modal-body {

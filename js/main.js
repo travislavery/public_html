@@ -1,7 +1,7 @@
 var background = (function(){
 	var $backCarousel = $('#backgroundPics');
 	$backCarousel.on('slid.bs.carousel', changeBackground);
-	$backCarousel.on('slide.bs.carousel', animateChange);
+	//$backCarousel.on('slide.bs.carousel', animateChange);
 	function changeBackground(){
 		var $activePic = $backCarousel.find('.active');
 		var $source = $activePic.attr('src')
@@ -159,15 +159,17 @@ var formSubmit=(function() {
 
 var history= (function() {
 	var $hDiv = $('#experienceDiv');
-	var $tBox = $hDiv.find('.history');
-	var $activeTBox = $hDiv.find('.active');
+	var $timeBox = $('#timelineBox');
+	var $tBox = $timeBox.find('.history');
+	var $activeTBox = $timeBox.find('.active');
 	var $docHeight = $(document).height();
 
+	$('#timelineNav').scrollspy({ target: '#myNav', offset: '100'});
 	$tBox.on("click", pressed);
 
 
 	function render() {
-		$activeTBox = $hDiv.find('.active');
+		$activeTBox = $timeBox.find('.active');
 	}
 
 	function pressed() {
@@ -182,8 +184,8 @@ var history= (function() {
 		var currentHeight = $(document).height();
 		var $textCode = $box.val();
 		$('#hText'+$textCode).toggleClass('hidden');
-		$($box).toggleClass('col-md-8');
-		$($box).toggleClass('col-md-push-2');
+		$($box).toggleClass('col-sm-12');
+		//$($box).toggleClass('col-md-push-2');
 		//if (currentHeight >= $docHeight) {
 		//	$('.bg').css('overflow', 'scroll');
 		//} else {

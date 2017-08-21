@@ -18,15 +18,16 @@
     <![endif]-->
     <link href='css/main.css' rel='stylesheet'>
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="55">
+    <div id="bg">
     <nav id='navBar1' role='navigation' class='navbar navbar-default navbar-fixed-top'>
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" id="navBtn1" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsedNav">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
           <a href="#" class="navbar-brand">
           <img src="images/thumbnails/tn_eye.jpg" id="eyePic">
@@ -35,32 +36,35 @@
         </div>
         <div class="collapse navbar-collapse" id="collapsedNav">
           <ul class="nav navbar-nav nav-pills">
-            <li class='active option' value="#overviewDiv"><a href='#'>Overview</a></li>
-            <li class='option' value="#moreAboutMeDiv"><a href='#'>More About Me</a></li>
-            <li class='option' value="#experienceDiv"><a href='#'>History</a></li>
-            <li class='option' value="#resumeDiv"><a href='#'>Resume</a></li>
+            <li><a href='#overviewDiv'>Overview</a></li>
+            <li><a href='#moreAboutMeDiv'>More About Me</a></li>
+            <li><a href='#experienceDiv'>History</a></li>
+            <li><a href='#resumeDiv'>Resume</a></li>
           </ul>
-          <button id="mouseBtn" type="button" class="btn btn-md btn-default navbar-btn navbar-right hidden-xs" data-target="#follower">Toggle Follower
-          </button>
           <button id="modalBtn" type="button" class="btn btn-md btn-default navbar-btn navbar-right" data-target="#contactDiv">Contact
           </button>
         </div>
       </div>
     </nav>
-    <div id="bg">
     <div id="backgroundPics" class="carousel slide carousel-fade" data-interval="10000" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
-        <div class='item active' src="../images/bike.jpg"></div>
-        <div class='item' src="../images/traintrack.jpg"></div>
-        <div class='item' src="../images/tree.png"></div>
-        
+        <figure class="item active">
+          <img src="images/bike.jpg" alt="bike" class="center-block carouselPic">
+          <figcaption class="right carousel-caption">Catalina Island</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="images/traintrack.jpg" alt="traintrack" class="center-block carouselPic">
+          <figcaption class="right carousel-caption">Arches National Park</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="images/tree.png" alt="traintrack" class="center-block carouselPic">
+          <figcaption class="right carousel-caption">Tree in Salt Lake City</figcaption>
+        </figure>
       </div>
     </div>
-    <div id="follower" class="follow hidden-xs"></div>
-    <div id="pageBody">
-      <div id='overviewDiv' class='activeD box'>
+    <div id='overviewDiv' class="row">
       	<div class="container col-md-12">
-      		<div id='box1' class="panel panel-default box col-md-5 col-md-push-3">
+      		<div id='box1' class="panel panel-default box col-md-6 col-md-push-3">
       			<div class="panel-body">
       				<button type="button" class="close1 pull-right" data-dismiss="panel" aria-label="Close">
       					<span aria-hidden="true">&times;</span>
@@ -70,29 +74,29 @@
       		</div>
       	</div>
         <div><img class="text-center" src="images/under-construction.jpg" height='150px' width='150px'></div>
-      </div>
-      <div id="moreAboutMeDiv" class='nonActive container-fluid'>
+    </div>
+    <div id="moreAboutMeDiv" class="row">
+      <div class='container-fluid'>
         <div class="container">
-          <div class="container">
           <div id="aboutMeTabs" class="col-md-4">
             <ul class="nav nav-pills nav-stacked list-group">
-              <li class='active' value="#section1"><a href="#" class="list-group-item">
+              <li class='active' value="#section1"><a href="#" onClick="return false;" class="list-group-item">
                 <h4 class="list-group-item-heading"><em>Text Editor</em></h4>
                 <p class="list-group-item-text">Sublime</p>
               </a></li>
-              <li value="#section2"><a href="#" class="list-group-item">
+              <li value="#section2"><a href="#" onClick="return false;" class="list-group-item">
                 <h4 class="list-group-item-heading"><em>GitHub</em></h4>
                 <p class="list-group-item-text">A link to my GitHub</p>
               </a></li>
-              <li value="#section3"><a href="#" class="list-group-item">
+              <li value="#section3"><a href="#" onClick="return false;" class="list-group-item">
                  <h4 class="list-group-item-heading"><em>Books</em></h4>
                 <p class="list-group-item-text">Finished, and in progress</p>
               </a></li>
-              <li value="#section4"><a href="#" class="list-group-item">
+              <li value="#section4"><a href="#" onClick="return false;" class="list-group-item">
                  <h4 class="list-group-item-heading"><em>Coming Soon</em></h4>
                 <p class="list-group-item-text">Projects I plan on</p>
               </a></li>
-              <li value="#section5"><a href="#" class="list-group-item">
+              <li value="#section5"><a href="#" onClick="return false;" class="list-group-item">
                  <h4 class="list-group-item-heading"><em>More</em></h4>
                 <p class="list-group-item-text">A bit about me</p>
               </a></li>
@@ -158,9 +162,10 @@
         </div>
         </div>
         </div>
-        </div>
       </div>
-      <div id="experienceDiv" class='nonActive' data-spy='scroll' data-target="#myNav" data-offset="50">
+    </div>
+    <div id="experienceDiv" class="row">
+      <div>
       	<div class="container">
       		<div class="pop-box col-sm-12 col-sm-push-1">
       			<h1 class="hidden-xs">Timeline</h1>
@@ -171,7 +176,7 @@
         <div class="row">
           <div id='sideBar' class="col-sm-2">
             <nav id="myNav">
-              <ul id='timelineUL' class="nav nav-pills nav-stacked" data-spy="affix" data-offset="80">
+              <ul id='timelineUL' class="nav nav-pills nav-stacked">
                 <li><a href="#t1">Intro</a></li>
                 <li><a href="#t2">Python</a></li>
                 <li><a href="#t3">HTML and CSS</a></li>
@@ -261,11 +266,11 @@
         </div>
       </div>
       </div>
-      <div id="resumeDiv" class='nonActive box'>
-      	<div class="">
-      		<div class="text-center col-sm-12">
-      			<iframe src="http://docs.google.com/gview?url=http://travislavery.com/resume/TravisResume.pdf&embedded=true" style="width:600px; height:700px;" frameborder="0"></iframe>
-      		</div>
+      </div>
+      <div class="row">
+      <div id="resumeDiv">
+      	<div class="text-center col-sm-12">
+      		<iframe src="http://docs.google.com/gview?url=http://travislavery.com/resume/TravisResume.pdf&embedded=true" style="width:600px; height:775px;" frameborder="0"></iframe>
       	</div>
       </div>
       <div id="contactDiv" class='nonActive box modal' tabindex="-1" role="dialog" aria-labelledby="contactMe" aria-hidden="true">
@@ -291,6 +296,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
       <div id="messageModal" class="nonActive box modal" tabindex="-1" role="dialog" aria-labelledby="messageForm" aria-hidden="true">
       	<div class="modal-dialog modal-md">
@@ -345,7 +351,6 @@
       	</div>
       </div>
     </div>
-    </div>
   </body>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -353,7 +358,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./js/bootstrap.js"></script>
     <script src='./js/main.js'></script>
-    <script src="./js/mouseFollow.js"></script>
     <script src="./js/interactiveRoots.js"></script>
   </body>
 

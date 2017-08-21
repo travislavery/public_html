@@ -1,7 +1,36 @@
 body, html{
 	height: 100%;
 	background-color: black;
+}
+
+body {
 	position: relative;
+}
+
+#backgroundPics {
+	position: fixed;
+	overflow: none;
+}
+
+#bg {
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: auto;
+	color: black;
+	overflow: auto;
+}
+
+#overviewDiv, #moreAboutMeDiv, #experienceDiv, #resumeDiv {
+	padding-top: 60px;
+}
+
+#t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8 {
+	padding-top: 20px;
+}
+
+.row {
+	padding-bottom:100px;
 }
 
 /*@keyframes fadeIn {
@@ -34,10 +63,7 @@ body, html{
 	animation-timing-function: linear;
 }*/
 
-#pageBody {
-	margin-top: 0;
-	padding-top: 80px;
-}
+
 
 #welcomeMemo {
 	color: black;
@@ -128,13 +154,3 @@ body, html{
 	color: darkblue;
 }
 
-.follow {
-	position: absolute;
-	display: flex;
-	background: url(../images/corgi1.png) -202px 0;
-	margin: 0;
-	border: 0;
-	padding: 0;
-	width: 80px;
-	height: 150px;
-}

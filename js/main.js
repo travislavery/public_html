@@ -1,7 +1,6 @@
 var background = (function(){
 	var $backCarousel = $('#backgroundPics');
-	$backCarousel.on('slid.bs.carousel', changeBackground);
-	//$backCarousel.on('slide.bs.carousel', animateChange);
+	/*$backCarousel.on('slid.bs.carousel', changeBackground);
 	function changeBackground(){
 		var $activePic = $backCarousel.find('.active');
 		var $source = $activePic.attr('src')
@@ -10,58 +9,35 @@ var background = (function(){
 			'backgroundRepeat': 'no-repeat',
 			'backgroundPosition': 'top center',
 			'background-size': 'auto',
-			'overflow': 'auto',
 			'color': 'black',
-			'height': '100%'
+			'overflow': 'auto'
 		});
 	}
-	changeBackground();
+	changeBackground();*/
 
 })()
 
 var navBar = (function(){
 	var $navB = $('#navBar1');
 	var $ul = $navB.find('ul');
-	var $navTabs = $navB.find('.option');
-	var $activeTab = $navB.find('.active');
 	var $body = $('#pageBody');
-	var $activeDiv = $body.find('.activeD');
-
-	$navTabs.on('click', swapNavTab);
 
 	render();
 	hideMenu();
 
 	function render() {
-		$activeTab = $navB.find('.active');
-		$activeDiv = $body.find('.activeD')
-	}
-
-	function swapNavTab() {
-		$activeTab.removeClass('active');
-		var $valInfo = $(this).attr('value');
-		$(this).addClass('active');
-		swapBody($activeDiv, $body, $valInfo);
-		render();
-	}
-
-	function swapBody($active, $area, val) {
-		var $target = $area.find(val);
-		$active.toggleClass('activeD nonActive');
-		$target.toggleClass('nonActive activeD');
 	}
 
 	function hideMenu(){
 		$(document).click(function (e) {
     		e.stopPropagation();
     		var container = $("#navBar1");
-
-    		//check if the clicked area is dropDown or not
     		if (container.has(e.target).length === 0 && $('#collapsedNav').attr('aria-expanded') === 'true') {
         		$('#navBtn1').click();
         	}
 		})
 	}
+	$(function() {})
 })()
 
 var overview= (function(){
@@ -164,7 +140,7 @@ var history= (function() {
 	var $activeTBox = $timeBox.find('.active');
 	var $docHeight = $(document).height();
 
-	$('#timelineNav').scrollspy({ target: '#myNav', offset: '100'});
+	$($hDiv).scrollspy({ target: '#myNav' });
 	$tBox.on("click", pressed);
 
 

@@ -33,6 +33,9 @@ body {
 	padding-bottom:100px;
 }
 
+#infoArea div.row {
+	padding-bottom:0px;
+}
 /*@keyframes fadeIn {
 	0% {opacity:0;}
 	1% {opacity:.33;}
@@ -63,7 +66,10 @@ body {
 	animation-timing-function: linear;
 }*/
 
-
+#gitHubPic {
+	float:none;
+	margin: 0 auto;
+}
 
 #welcomeMemo {
 	color: black;
@@ -110,8 +116,8 @@ body {
 	padding-right:20px;
 }
 
-#eyePic {
-	height:100%;
+#eyePic, #gitPic {
+	height:130%;
 	width: auto;
 }
 

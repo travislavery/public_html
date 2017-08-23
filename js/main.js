@@ -13,6 +13,34 @@ var navBar = (function(){
 })()
 
 var overview= (function(){
+	var $navs = $('body').find('nav a');
+	$(document).on('scroll', myNavStuff);
+
+	$($navs).on('click', function(event) {
+		if (this.hash !== '') {
+			event.preventDefault();
+			var hash= this.hash;
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 800, function() {
+				window.location.hash = hash;
+			});
+		}
+	})
+
+	function myNavStuff() {
+		var topE = $('#experienceDiv').offset().top;
+		var bottomE = $('#resumeDoc').offset().top - 150;
+		bottomE = $(document).height() - bottomE;
+		$('#myNav').affix({
+			offset: {
+			top: topE,
+			bottom: bottomE
+			}
+		});
+		var activeNav;
+	}
+
 	
 })()
 
@@ -25,6 +53,8 @@ var moreAboutMe= (function(){
 		e.preventDefault();
 		$(this).tab('show');
 	}
+
+
 })()
 var books=(function() {
 	var $bDiv = $('#bookDiv');
@@ -56,8 +86,10 @@ var history= (function() {
 	var $timeBox = $('#timelineBox');
 	var $tBox = $timeBox.find('.history');
 	var $activeTBox = $timeBox.find('.active');
+	var $hash = $hDiv.offset().top;
 
-	$($hDiv).scrollspy({ target: '#myNav' });
+
+
 	$tBox.on("click", pressed);
 
 

@@ -29,6 +29,14 @@ body {
 	padding-top: 20px;
 }
 
+.affix-bottom{
+	position: absolute;
+}
+
+#contentDivE {
+	padding: 0;
+}
+
 .row {
 	padding-bottom:100px;
 }
@@ -130,8 +138,16 @@ body {
 	position: relative;
 }
 
-#timelineUL li.active {
+#timelineUL {
+	color: black;
+	background-color: white;
 	font-weight: bold;
+	background: rgba(211, 211, 211, .6);
+	min-width: 170px;
+}
+
+#timelineUL li.active {
+	text-decoration: underline;
 }
 
 #experienceDiv {
@@ -139,7 +155,7 @@ body {
 }
 
 .affix {
-	top: 50px;
+	top: 100px;
 }
 
 .modal-content, .modal-header, .modal-body {

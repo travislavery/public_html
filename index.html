@@ -169,7 +169,7 @@
         </div>
       </div>
     </div>
-    <div id="experienceDiv" class="row">
+    <div id="experienceDiv" class="row" data-spy="scroll" data-target="#myNav" data-offset="55">
       <div>
       	<div class="container">
       		<div class="pop-box col-sm-12 col-sm-push-1">
@@ -177,25 +177,15 @@
       			<h3 class="visible-xs-block">Timeline</h3>
       		</div>
       	</div>
-        <div class="container center-block pop-box">
+        <div id="contentDivE" class="container center-block pop-box">
         <div class="row">
           <div id='sideBar' class="col-sm-2">
-            <nav id="myNav">
-              <ul id='timelineUL' class="nav nav-pills nav-stacked hidden-xs">
-                <li><a href="#t1">Intro</a></li>
+            <nav id="myNav" role="tablist">
+              <ul id='timelineUL' class="nav well nav-stacked hidden-xs">
+                <li class='active'><a href="#t1">Intro</a></li>
                 <li><a href="#t2">Python</a></li>
-                <li><a href="#t3">HTML and CSS</a></li>
-                <li><a href="#t4">Javascript, mySQL, Github</a></li>
-                <li><a href="#t5">Phaser.io</a></li>
-                <li><a href="#t6">Bootstrap</a></li>
-                <li><a href="#t7">nodeJS</a></li>
-                <li><a href="#t8">Future</a></li>
-              </ul>
-              <ul id='timelineUL' class="nav nav-pills visible-xs-block">
-                <li><a href="#t1">Intro</a></li>
-                <li><a href="#t2">Python</a></li>
-                <li><a href="#t3">HTML and CSS</a></li>
-                <li><a href="#t4">Javascript, mySQL, Github</a></li>
+                <li><a href="#t3">HTML, CSS</a></li>
+                <li><a href="#t4">Javascript</a></li>
                 <li><a href="#t5">Phaser.io</a></li>
                 <li><a href="#t6">Bootstrap</a></li>
                 <li><a href="#t7">nodeJS</a></li>
@@ -285,7 +275,7 @@
       <div class="row">
       <div id="resumeDiv">
       	<div class="text-center col-sm-12">
-      		<iframe src="http://docs.google.com/gview?url=http://travislavery.com/resume/TravisResume.pdf&embedded=true" style="width:600px; height:775px;" frameborder="0"></iframe>
+      		<iframe id="resumeDoc" src="http://docs.google.com/gview?url=http://travislavery.com/resume/TravisResume.pdf&embedded=true" style="width:600px; height:775px;" frameborder="0"></iframe>
       	</div>
       </div>
       <div id="contactDiv" class='box modal fade' tabindex="-1" role="dialog" aria-labelledby="contactMe" aria-hidden="true">

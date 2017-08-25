@@ -1,5 +1,37 @@
-var background = (function(){
-	var $backCarousel = $('#backgroundPics');
+var homePic = (function(){
+	var $background = $('.carouselPic');
+	var $navBar1 = $('#navBar1');
+	var $pxFromTop = $navBar1.offset().top;
+	if ($pxFromTop >= 200) {
+		$navBar1.addClass('navbar-default navbar-fixed-top');
+		$('#navBar1tabs').addClass('nav-pills');
+	} else if ($pxFromTop < 200) {
+		if ($navBar1.hasClass('navbar-default')) {
+			$navBar1.removeClass('navbar-default navbar-fixed-top');
+		} 
+	}
+	
+	
+
+	$(window).resize(function() {
+		console.log(window);
+		if ($($background).length>0) {	
+			if ($(window).width()>=968) {
+				$background.width($(window).width());
+				$('#backgroundDiv').width($(window).width());
+			} else if ($(window).width() < 968) {
+				$background.width(968);
+			}
+			if ($(window).height() >= 500) {
+				$background.height($(window).height());
+				$('#backgroundDiv').height($(window).height());
+				//$background.css('min-height', $('#overviewDiv').offset().top+'px');
+			} else if ($(window).height() < 500) {
+				$background.height(500);
+			}
+			
+		}
+	})
 })()
 
 var navBar = (function(){
@@ -14,7 +46,9 @@ var navBar = (function(){
 
 var overview= (function(){
 	var $navs = $('body').find('nav a');
-	$(document).on('scroll', myNavStuff);
+	myNavStuff();
+
+	$(window).on('scroll', checkScroll);
 
 	$($navs).on('click', function(event) {
 		if (this.hash !== '') {
@@ -26,21 +60,62 @@ var overview= (function(){
 				window.location.hash = hash;
 			});
 		}
+
 	})
 
 	function myNavStuff() {
-		var topE = $('#experienceDiv').offset().top;
-		var bottomE = $('#resumeDoc').offset().top - 150;
-		bottomE = $(document).height() - bottomE;
+		var topE = $('#experienceDiv').offset().top -50;
+		var bottomF = $('#moreAboutMeDiv').offset().top - 150;
+		var bottomE = $(document).height() - bottomF;
 		$('#myNav').affix({
 			offset: {
 			top: topE,
 			bottom: bottomE
 			}
 		});
-		var activeNav;
 	}
+	//var activeBox = $('#t1');
+	function checkScroll() {
+		if (window){}
+		/*switch (window.location.hash) {
+		case '#t1':
+			activeBox.removeClass('active');
+			activateBox("#t1");
+			break;
+		case '#t2':
+			activeBox.removeClass('active');
+			activateBox("#t2");
+			break;
+		case '#t3':
+			activeBox.removeClass('active');
+			activateBox("#t3");
+			break;
+		case '#t4':
+			activeBox.removeClass('active');
+			activateBox("#t4");
+			break;
+		case '#t5':
+			activeBox.removeClass('active');
+			activateBox("#t5");
+			break;
+		case '#t6':
+			activeBox.removeClass('active');
+			activateBox("#t6");
+			break;
+		case '#t7':
+			activeBox.removeClass('active');
+			activateBox("#t7");
+			break;
+		case '#t8':
+			activeBox.removeClass('active');
+			activateBox("#t8");
+	}}
 
+	function activateBox(hash) {
+		activeBox = $(hash);
+		activeBox.addClass('active');
+	}*/
+}
 	
 })()
 

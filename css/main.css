@@ -7,9 +7,26 @@ body {
 	position: relative;
 }
 
-#backgroundPics {
-	position: fixed;
+/*#backgroundPics {
+	position: static;
 	overflow: none;
+}*/
+
+.carouselPics {
+	width: 100%;
+	height: 100%;
+	overflow: none;
+	margin: 0;
+	min-width: 968px;
+}
+
+#backgroundDiv {
+	position: relative;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin: 0;
 }
 
 #bg {
@@ -21,12 +38,26 @@ body {
 	overflow: auto;
 }
 
+#navBar1 {
+	z-index: 15;
+}
+
 #overviewDiv, #moreAboutMeDiv, #experienceDiv, #resumeDiv {
-	padding-top: 60px;
+	padding-top: 160px;
+	padding-bottom:100px;
+}
+
+#moreAboutMeDiv, #overviewDiv {
+	background-color: white;
+	background: white;
 }
 
 #t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8 {
-	padding-top: 20px;
+	padding-top: 40px;
+}
+
+.bBox {
+	background: black;
 }
 
 .affix-bottom{
@@ -37,9 +68,7 @@ body {
 	padding: 0;
 }
 
-.row {
-	padding-bottom:100px;
-}
+
 
 #infoArea div.row {
 	padding-bottom:0px;
@@ -140,9 +169,8 @@ body {
 
 #timelineUL {
 	color: black;
-	background-color: white;
 	font-weight: bold;
-	background: rgba(211, 211, 211, .6);
+	/*background: rgba(211, 211, 211, .6);*/
 	min-width: 170px;
 }
 
@@ -155,7 +183,7 @@ body {
 }
 
 .affix {
-	top: 100px;
+	top: 300px;
 }
 
 .modal-content, .modal-header, .modal-body {

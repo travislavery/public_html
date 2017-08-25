@@ -20,7 +20,7 @@
   </head>
   <body data-spy="scroll" data-target="#navBar1" data-offset="55">
     <div id="bg">
-    <nav id='navBar1' role='navigation' class='navbar navbar-default navbar-fixed-top'>
+    <nav id='navBar1' role='navigation' class='navbar navbar-fixed-top'>
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" id="navBtn1" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsedNav">
@@ -32,14 +32,15 @@
           <a href="#" class="navbar-brand">
             <img class="" src="images/corgiSite.jpg" id="eyePic">
           </a>
-          <p class="navbar-text"><strong>Travis Lavery</strong></p>
+          <h2 class="navbar-text"><strong>Travis Lavery</strong></h2>
         </div>
         <div class="collapse navbar-collapse" id="collapsedNav">
-          <ul class="nav navbar-nav nav-pills">
+          <ul id='navBar1tabs' class="nav navbar-nav nav-pills">
             <li><a href='#overviewDiv'>Overview</a></li>
+            <li id='eNav'><a href='#experienceDiv'>History</a></li>
             <li><a href='#moreAboutMeDiv'>More About Me</a></li>
-            <li><a href='#experienceDiv'>History</a></li>
             <li><a href='#resumeDiv'>Resume</a></li>
+            <li class=""><a href="#wordPressLink">WordPress Site</a></li>
           </ul>
           <a href='https://github.com/travislavery' target='_blank' class="navbar-brand">
             <img class="img-circle" src="images/github.png" id="gitPic">
@@ -49,7 +50,7 @@
         </div>
       </div>
     </nav>
-    <div id="backgroundPics" class="carousel slide carousel-fade hidden-xs" data-interval="10000" data-ride="carousel">
+    <div id="backgroundDiv" class="row carousel slide carousel-fade" data-interval="10000" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
         <figure class="item active">
           <img src="images/bike.jpg" alt="bike" class="center-block carouselPic">
@@ -79,10 +80,112 @@
             <img class="text-center" src="images/under-construction.jpg" height='150px' width='150px'>
           </div>
       	</div>
-        
+    </div>
+    <div id="experienceDiv" class="row" data-spy="affix" data-target="#myNav" data-offset='55'>
+      <div>
+        <div class="container">
+          <div class="pop-box col-sm-12 col-sm-push-1">
+            <h1 class="hidden-xs">Timeline</h1>
+            <h3 class="visible-xs-block">Timeline</h3>
+          </div>
+        </div>
+        <div id="contentDivE" class="container center-block pop-box">
+        <div class="row">
+          <div id='sideBar' class="col-sm-2">
+            <nav id="myNav" role="navigation">
+              <ul id='timelineUL' class="nav nav-stacked hidden-xs">
+                <li class='active'><a href="#t1">Intro</a></li>
+                <li><a href="#t2">Python</a></li>
+                <li><a href="#t3">HTML, CSS</a></li>
+                <li><a href="#t4">Javascript</a></li>
+                <li><a href="#t5">Phaser.io</a></li>
+                <li><a href="#t6">Bootstrap</a></li>
+                <li><a href="#t7">nodeJS</a></li>
+                <li><a href="#t8">Future</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div id='timelineBox' class="container pop-box col-sm-10">
+            <div id="t1" class="btn-group">
+              <button class="btn btn-default history active" type="button" value="1">
+              <div class="thumbnail box">
+                <p>1. Intro</p>
+                <p class="hidden-xs">Introduced to code</p>
+                <p id="hText1" class="hText">What first got me interested in coding was the realization that code is now a part of every aspect of our lives. From an alarm clock to a video game, everything needs code to work. I decided I want to help create things, and I love the feeling of purpose I’ve gained in the realization that given time, dedication, and good code I can literally create anything I can imagine. I’ve been working as a mail-man, walking around delivering mail for the last 2 ½ years. It is mindless work, so I’ve spent every day just thinking up ideas about this that and everything in between. About 9 months ago, a good friend gave me my first real introduction into what it was like to code, and I immediately knew that I was going to become a developer of some sort, and as soon as I could manage.</p>
+              </div>
+              </button>
+            </div>
+            <div id="t2" class="btn-group">
+              <button class="btn btn-default history" type="button" value="3">
+              <div class="thumbnail box">
+                <p>2. Python</p>
+                <p class="hidden-xs">My First Language</p>
+                <p id="hText3" class="hText hidden">I began by learning the basics of Python, and I really enjoy Python because it works just how it looks when you type out the code (for the most part). I created a text based game where you respond to events in the game, with my code checking to make sure that you aren’t just typing gibberish. It is a rather short game, but I learned a ton while making it.</p>
+              </div>
+              </button>
+            </div>
+            <div id="t3" class="btn-group">
+              <button class="btn btn-default history" type="button" value="4">
+              <div class="thumbnail box">
+                <p>3. HTML and CSS</p>
+                <p class="hidden-xs">Made some websites</p>
+                <p id="hText4" class="hText hidden">Next came html and css. I learned these because I like the idea of understanding how a website looks how it looks, and functions how it does. It seems simple at first, and while it was less of a learning curve for me than other languages, to this day I am googling how to do this or that with css. <br>
+                Wanting to get a live preview of my website drove me to installing nodeJS so that I could get access to all the modules that are available. I used npm to get a live-preview work flow, and then I realized that with html and css I was pretty much just painting. I could get my websites to look great, but they weren’t functional. I’m sure you know what came next, Javascript.</p>
+              </div>
+              </button>
+            </div>
+            <div id="t4" class="btn-group">
+              <button class="btn btn-default history" type="button" value="5">
+              <div class="thumbnail box">
+                <p>4. Javascript, mySQL, GitHub</p>
+                <p class="hidden-xs">Rabbit hole</p>
+                <p id="hText5" class="hText hidden">Oh, the journey I’ve had learning Javascript. I caught on to the basics very quickly, using my knowledge from Python to help me out understanding the functions, variables, etc. I even got down the for loop! (eventually). Right away I began to learn and use jquery, because I wanted to be able to make functional sites. Randomly in the middle of learning these, I jumped over to learn mySQL and also how to use GitHub, and then I was back to javascript.</p>
+              </div>
+              </button>
+            </div>
+            <div id="t5" class="btn-group">
+              <button class="btn btn-default history" type="button" value="6">
+              <div class="thumbnail box">
+                <p>5. Phaser.io</p>
+                <p class="hidden-xs">Made a few Games</p>
+                <p id="hText6" class="hText hidden">I learned that you could create games using javascript, which sounded like a blast, so I searched out how to do it. Phaser.io was the framework I decided on, and I proceeded to create 2 different games, though neither of them are super polished. In the past, I’ve used a graphic design program I have (Correll Draw) to create logos and the like, and I used my proficiency with that to create all the objects I needed for my games, and then brought them to life! While I enjoyed creating these games greatly, I didn’t think it was something that I wanted to do for a career. </p>
+              </div>
+              </button>
+            </div>
+            <div id="t6" class="btn-group">
+              <button class="btn btn-default history" type="button" value="7">
+              <div class="thumbnail box">
+                <p>6. Bootstrap</p>
+                <p class="hidden-xs">Enjoying the website?</p>
+                <p id="hText7" class="hText hidden">I turned back to looking at html, css, and javascript. Next came Bootstrap, because when I was over at my friend’s house (he is a full-stack developer), he showed me a decent looking website he was using to display all his tests that he ran on his code. “I only had to code like 5 lines of css” he said passingly. I gave him that “You’re joking” look, and he told me about Bootstrap. Bootstrap is great because, well, it gives html a framework to build on, as well as some basic functionality. This website is an expression of the knowledge I’ve gained about bootstrap.</p>
+              </div>
+              </button>
+            </div>
+            <div id="t7" class="btn-group">
+              <button class="btn btn-default history" type="button" value="8">
+              <div class="thumbnail box">
+                <p>7. nodeJS</p>
+                <p class="hidden-xs">Currently learning</p>
+                <p id="hText8" class="hText hidden">Most recently I’ve been learning nodeJS more fully, and it has been great. When I am coding in just normal javascript I catch myself trying to do things that I can do with node easily, but that require a bit of research and a module or two to get to work in the web browser environment. I also recently got to figure out how to use a server to host my website, which was very educational. I've also been experimenting with Postman and API's.</p>
+              </div>
+              </button>
+            </div>
+            <div id="t8" class="btn-group">
+              <button class="btn btn-default history" type="button" value="9">
+              <div class="thumbnail box">
+                <p>The Future</p>
+                <p class="hidden-xs">Just the Beginning</p>
+                <p id="hText9" class="hText hidden">And so here we are! Learning to code part-time just isn’t cutting it for me anymore, I would like to turn these skills I’ve spent all this time and effort learning into a career. I want to keep learning and advancing my knowledge, and put my naturally problem-solving mindset to good use! I am looking for a place to work that will push me to do better every single day, and challenge me to do more. Being as I have not worked professionally in this field before, somewhere that has some people who have been doing this for a while and who can answer my questions would be amazing. I believe I am an excellent addition to any team, why not give me a shot?</p>
+              </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
     <div id="moreAboutMeDiv" class="row">
-      <div class='container-fluid'>
+      <div class='container-fluid col-md-12'>
         <div class="container">
           <div id="aboutMeTabs" class="col-md-4">
             <ul class="nav nav-pills list-group">
@@ -148,16 +251,16 @@
         	<h1>Future Projects</h1>
           <ul class="list-group">
         		<li class="list-group-item box">
-        			<h3 class="list-group-item-heading">Contact me Message</h3>
-        			<h3 class="list-group-item-text">Allow people to leave me a message here on the site.</h3>
+        			<h4 class="list-group-item-heading">Contact me Message</h4>
+        			<h5 class="list-group-item-text">Allow people to leave me a message here on the site.</h5>
         		</li>
         		<li class="list-group-item box">
-        			<h3 class="list-group-item-heading">Quote Puller</h3>
-        			<h3 class="list-group-item-text">Have a quote puller that chooses a random quote from a website, then formats and puts it on the Overview page.</h3>
+        			<h4 class="list-group-item-heading">Quote Puller</h4>
+        			<h5 class="list-group-item-text">Have a quote puller that chooses a random quote from a website, then formats and puts it on the Overview page.</h5>
           	</li>
         		<li class="list-group-item box">
-          		<h3 class="list-group-item-heading">Embed games</h3>
-        			<h3 class="list-group-item-text">Figure out how to embed my Phaser.io games into my website.</h3>
+          		<h4 class="list-group-item-heading">Embed games</h4>
+        			<h5 class="list-group-item-text">Figure out how to embed my Phaser.io games into my website.</h5>
         		</li>
         	</ul>
         </div>
@@ -169,114 +272,16 @@
         </div>
       </div>
     </div>
-    <div id="experienceDiv" class="row" data-spy="scroll" data-target="#myNav" data-offset="55">
-      <div>
-      	<div class="container">
-      		<div class="pop-box col-sm-12 col-sm-push-1">
-      			<h1 class="hidden-xs">Timeline</h1>
-      			<h3 class="visible-xs-block">Timeline</h3>
-      		</div>
-      	</div>
-        <div id="contentDivE" class="container center-block pop-box">
-        <div class="row">
-          <div id='sideBar' class="col-sm-2">
-            <nav id="myNav" role="tablist">
-              <ul id='timelineUL' class="nav well nav-stacked hidden-xs">
-                <li class='active'><a href="#t1">Intro</a></li>
-                <li><a href="#t2">Python</a></li>
-                <li><a href="#t3">HTML, CSS</a></li>
-                <li><a href="#t4">Javascript</a></li>
-                <li><a href="#t5">Phaser.io</a></li>
-                <li><a href="#t6">Bootstrap</a></li>
-                <li><a href="#t7">nodeJS</a></li>
-                <li><a href="#t8">Future</a></li>
-              </ul>
-            </nav>
-          </div>
-        	<div id='timelineBox' class="container pop-box col-sm-10">
-        		<div id="t1" class="btn-group">
-        			<button class="btn btn-default history active" type="button" value="1">
-	        		<div class="thumbnail box">
-	        			<p>1. Intro</p>
-	        			<p class="hidden-xs">Introduced to code</p>
-	        			<p id="hText1" class="hText">What first got me interested in coding was the realization that code is now a part of every aspect of our lives. From an alarm clock to a video game, everything needs code to work. I decided I want to help create things, and I love the feeling of purpose I’ve gained in the realization that given time, dedication, and good code I can literally create anything I can imagine. I’ve been working as a mail-man, walking around delivering mail for the last 2 ½ years. It is mindless work, so I’ve spent every day just thinking up ideas about this that and everything in between. About 9 months ago, a good friend gave me my first real introduction into what it was like to code, and I immediately knew that I was going to become a developer of some sort, and as soon as I could manage.</p>
-	        		</div>
-	    	    	</button>
-	    	    </div>
-	    	    <div id="t2" class="btn-group">
-        			<button class="btn btn-default history" type="button" value="3">
-	        		<div class="thumbnail box">
-	        			<p>2. Python</p>
-	        			<p class="hidden-xs">My First Language</p>
-	        			<p id="hText3" class="hText hidden">I began by learning the basics of Python, and I really enjoy Python because it works just how it looks when you type out the code (for the most part). I created a text based game where you respond to events in the game, with my code checking to make sure that you aren’t just typing gibberish. It is a rather short game, but I learned a ton while making it.</p>
-	        		</div>
-	    	    	</button>
-	    	    </div>
-	    	    <div id="t3" class="btn-group">
-        			<button class="btn btn-default history" type="button" value="4">
-	        		<div class="thumbnail box">
-	        			<p>3. HTML and CSS</p>
-	        			<p class="hidden-xs">Made some websites</p>
-	        			<p id="hText4" class="hText hidden">Next came html and css. I learned these because I like the idea of understanding how a website looks how it looks, and functions how it does. It seems simple at first, and while it was less of a learning curve for me than other languages, to this day I am googling how to do this or that with css. <br>
-						    Wanting to get a live preview of my website drove me to installing nodeJS so that I could get access to all the modules that are available. I used npm to get a live-preview work flow, and then I realized that with html and css I was pretty much just painting. I could get my websites to look great, but they weren’t functional. I’m sure you know what came next, Javascript.</p>
-	        		</div>
-	    	    	</button>
-	    	    </div>
-	    	    <div id="t4" class="btn-group">
-        			<button class="btn btn-default history" type="button" value="5">
-	        		<div class="thumbnail box">
-	        			<p>4. Javascript, mySQL, GitHub</p>
-	        			<p class="hidden-xs">Rabbit hole</p>
-	        			<p id="hText5" class="hText hidden">Oh, the journey I’ve had learning Javascript. I caught on to the basics very quickly, using my knowledge from Python to help me out understanding the functions, variables, etc. I even got down the for loop! (eventually). Right away I began to learn and use jquery, because I wanted to be able to make functional sites. Randomly in the middle of learning these, I jumped over to learn mySQL and also how to use GitHub, and then I was back to javascript.</p>
-	        		</div>
-	    	    	</button>
-	    	    </div>
-	    	    <div id="t5" class="btn-group">
-        			<button class="btn btn-default history" type="button" value="6">
-	        		<div class="thumbnail box">
-	        			<p>5. Phaser.io</p>
-	        			<p class="hidden-xs">Made a few Games</p>
-	        			<p id="hText6" class="hText hidden">I learned that you could create games using javascript, which sounded like a blast, so I searched out how to do it. Phaser.io was the framework I decided on, and I proceeded to create 2 different games, though neither of them are super polished. In the past, I’ve used a graphic design program I have (Correll Draw) to create logos and the like, and I used my proficiency with that to create all the objects I needed for my games, and then brought them to life! While I enjoyed creating these games greatly, I didn’t think it was something that I wanted to do for a career. </p>
-	        		</div>
-	    	    	</button>
-	    	    </div>
-	    	    <div id="t6" class="btn-group">
-        			<button class="btn btn-default history" type="button" value="7">
-	        		<div class="thumbnail box">
-	        			<p>6. Bootstrap</p>
-	        			<p class="hidden-xs">Enjoying the website?</p>
-	        			<p id="hText7" class="hText hidden">I turned back to looking at html, css, and javascript. Next came Bootstrap, because when I was over at my friend’s house (he is a full-stack developer), he showed me a decent looking website he was using to display all his tests that he ran on his code. “I only had to code like 5 lines of css” he said passingly. I gave him that “You’re joking” look, and he told me about Bootstrap. Bootstrap is great because, well, it gives html a framework to build on, as well as some basic functionality. This website is an expression of the knowledge I’ve gained about bootstrap.</p>
-	        		</div>
-	    	    	</button>
-	    	    </div>
-	    	    <div id="t7" class="btn-group">
-        			<button class="btn btn-default history" type="button" value="8">
-	        		<div class="thumbnail box">
-	        			<p>7. nodeJS</p>
-	        			<p class="hidden-xs">Currently learning</p>
-	        			<p id="hText8" class="hText hidden">Most recently I’ve been learning nodeJS more fully, and it has been great. When I am coding in just normal javascript I catch myself trying to do things that I can do with node easily, but that require a bit of research and a module or two to get to work in the web browser environment. I also recently got to figure out how to use a server to host my website, which was very educational. I've also been experimenting with Postman and API's.</p>
-	        		</div>
-	    	    	</button>
-	    	    </div>
-	    	    <div id="t8" class="btn-group">
-        			<button class="btn btn-default history" type="button" value="9">
-	        		<div class="thumbnail box">
-	        			<p>The Future</p>
-	        			<p class="hidden-xs">Just the Beginning</p>
-	        			<p id="hText9" class="hText hidden">And so here we are! Learning to code part-time just isn’t cutting it for me anymore, I would like to turn these skills I’ve spent all this time and effort learning into a career. I want to keep learning and advancing my knowledge, and put my naturally problem-solving mindset to good use! I am looking for a place to work that will push me to do better every single day, and challenge me to do more. Being as I have not worked professionally in this field before, somewhere that has some people who have been doing this for a while and who can answer my questions would be amazing. I believe I am an excellent addition to any team, why not give me a shot?</p>
-	        		</div>
-	    	    	</button>
-	    	    </div>
-        	</div>
-        </div>
-      </div>
-      </div>
-      </div>
-      <div class="row">
+    <div class="row">
       <div id="resumeDiv">
       	<div class="text-center col-sm-12">
       		<iframe id="resumeDoc" src="http://docs.google.com/gview?url=http://travislavery.com/resume/TravisResume.pdf&embedded=true" style="width:600px; height:775px;" frameborder="0"></iframe>
       	</div>
+      </div>
+      <div id="wordPressLink" class="row container-fluid">
+        <div class="col-xs-12">
+          <button type="button" class="btn btn-default col-xs-12"><a href="/wordpress">WordPress designed site</a></button>
+        </div>
       </div>
       <div id="contactDiv" class='box modal fade' tabindex="-1" role="dialog" aria-labelledby="contactMe" aria-hidden="true">
         <div class="modal-dialog modal-md">

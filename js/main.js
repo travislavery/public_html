@@ -1,20 +1,7 @@
 var homePic = (function(){
 	var $background = $('.carouselPic');
-	var $navBar1 = $('#navBar1');
-	var $pxFromTop = $navBar1.offset().top;
-	if ($pxFromTop >= 200) {
-		$navBar1.addClass('navbar-default navbar-fixed-top');
-		$('#navBar1tabs').addClass('nav-pills');
-	} else if ($pxFromTop < 200) {
-		if ($navBar1.hasClass('navbar-default')) {
-			$navBar1.removeClass('navbar-default navbar-fixed-top');
-		} 
-	}
-	
-	
 
 	$(window).resize(function() {
-		console.log(window);
 		if ($($background).length>0) {	
 			if ($(window).width()>=968) {
 				$background.width($(window).width());
@@ -35,6 +22,45 @@ var homePic = (function(){
 })()
 
 var navBar = (function(){
+	var $navBar1 = $('#navBar1');
+	var $pxFromTop = $('#overviewDiv').offset().top;
+	var $nameText = $('#navbarName');
+	var $topTabText = $('#navBar1tabs li a');
+	var white = 'rgb(255, 255, 255)';
+	var black = 'rgb(0, 0, 0)';
+	
+	$(window).on('activate.bs.scrollspy', textColorSwap);
+
+	function textColorSwap() {
+		if ($nameText.css('color') === black) {
+			toWhite();
+		} else if ($nameText.css('color') === white) {
+			toBlack();
+		}
+	}
+	
+	function toWhite() {
+		$nameText.css('color', white);
+		$topTabText.css({
+			'color': white,
+			'background-color': black,
+			'border-color': white
+			});
+		$('#navBtn1').css('border-color', white);
+		$('#navBtn1 span.icon-bar').css('border-color', white);
+	}
+
+	function toBlack() {
+		$nameText.css('color', black);
+		$topTabText.css({
+			'color': black,
+			'background-color': white,
+			'border-color': black
+			});
+		$('#navBtn1').css('border-color', black);
+		$('#navBtn1 span.icon-bar').css('border-color', black);
+	}
+	
 	$(document).click(function (e) {
   		e.stopPropagation();
    		var container = $("#navBar1");
@@ -48,23 +74,18 @@ var overview= (function(){
 	var $navs = $('body').find('nav a');
 	myNavStuff();
 
-	$(window).on('scroll', checkScroll);
-
 	$($navs).on('click', function(event) {
 		if (this.hash !== '') {
 			event.preventDefault();
 			var hash= this.hash;
 			$('html, body').animate({
 				scrollTop: $(hash).offset().top
-			}, 800, function() {
-				window.location.hash = hash;
-			});
+			}, 800);
 		}
-
 	})
 
 	function myNavStuff() {
-		var topE = $('#experienceDiv').offset().top -50;
+		var topE = $('#experienceDiv').offset().top -75;
 		var bottomF = $('#moreAboutMeDiv').offset().top - 150;
 		var bottomE = $(document).height() - bottomF;
 		$('#myNav').affix({
@@ -73,50 +94,7 @@ var overview= (function(){
 			bottom: bottomE
 			}
 		});
-	}
-	//var activeBox = $('#t1');
-	function checkScroll() {
-		if (window){}
-		/*switch (window.location.hash) {
-		case '#t1':
-			activeBox.removeClass('active');
-			activateBox("#t1");
-			break;
-		case '#t2':
-			activeBox.removeClass('active');
-			activateBox("#t2");
-			break;
-		case '#t3':
-			activeBox.removeClass('active');
-			activateBox("#t3");
-			break;
-		case '#t4':
-			activeBox.removeClass('active');
-			activateBox("#t4");
-			break;
-		case '#t5':
-			activeBox.removeClass('active');
-			activateBox("#t5");
-			break;
-		case '#t6':
-			activeBox.removeClass('active');
-			activateBox("#t6");
-			break;
-		case '#t7':
-			activeBox.removeClass('active');
-			activateBox("#t7");
-			break;
-		case '#t8':
-			activeBox.removeClass('active');
-			activateBox("#t8");
-	}}
-
-	function activateBox(hash) {
-		activeBox = $(hash);
-		activeBox.addClass('active');
-	}*/
-}
-	
+	}		
 })()
 
 var moreAboutMe= (function(){
@@ -140,10 +118,6 @@ var books=(function() {
 	function showActiveBook() {
 		$(this).toggleClass('blueB');
 	}
-})()
-
-var contactMe= (function(){
-
 })()
 
 var formSubmit=(function() {

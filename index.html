@@ -18,7 +18,7 @@
     <![endif]-->
     <link href='css/main.css' rel='stylesheet'>
   </head>
-  <body data-spy="scroll" data-target="#navBar1" data-offset="55">
+  <body data-spy="scroll" data-target="#navBar1" data-offset="60">
     <div id="bg">
     <nav id='navBar1' role='navigation' class='navbar navbar-fixed-top'>
       <div class="container-fluid">
@@ -32,20 +32,18 @@
           <a href="#" class="navbar-brand">
             <img class="" src="images/corgiSite.jpg" id="eyePic">
           </a>
-          <h2 class="navbar-text"><strong>Travis Lavery</strong></h2>
+          <h2 id='navbarName' class="navbar-text"><strong>Travis Lavery</strong></h2>
         </div>
         <div class="collapse navbar-collapse" id="collapsedNav">
           <ul id='navBar1tabs' class="nav navbar-nav nav-pills">
+            <li class='active'><a href='#backgroundDiv'>Home</a></li>
             <li><a href='#overviewDiv'>Overview</a></li>
             <li id='eNav'><a href='#experienceDiv'>History</a></li>
             <li><a href='#moreAboutMeDiv'>More About Me</a></li>
             <li><a href='#resumeDiv'>Resume</a></li>
-            <li class=""><a href="#wordPressLink">WordPress Site</a></li>
+            <li class=""><a href="/wordpress">WordPress Site</a></li>
           </ul>
-          <a href='https://github.com/travislavery' target='_blank' class="navbar-brand">
-            <img class="img-circle" src="images/github.png" id="gitPic">
-          </a>
-          <button id="modalBtn" type="button" class="btn btn-md btn-default navbar-btn navbar-right" data-target="#contactDiv" data-toggle="modal">Contact
+          <button id="modalBtn" type="button" class="btn btn-md btn-default navbar-btn navbar-right" data-target="#contactDiv" data-toggle="modal">Contact Me
           </button>
         </div>
       </div>
@@ -67,17 +65,9 @@
       </div>
     </div>
     <div id='overviewDiv' class="row">
-      	<div class="container col-md-12">
-      		<div id='box1' class="panel panel-default box col-md-6 col-md-push-3">
-      			<div class="panel-body">
-      				<button type="button" class="close pull-right" data-dismiss="alert" data-target="#box1" aria-label="Close">
-      					<span aria-hidden="true">&times;</span>
-      				</button>
-      				<h3 id="welcomeMemo">Welcome! This site is as an area where you can check out some of the projects I’ve been working on. It also serves as a window into the skills and languages that I’ve learned over the past 9 months, as I’ve been teaching myself code. I really enjoy the smooth feeling of a one-page website, so I’ve done my best to create one. Enjoy!</h3>
-      			</div>
-      		</div>
-          <div>
-            <img class="text-center" src="images/under-construction.jpg" height='150px' width='150px'>
+      	<div class="container">
+          <div class="col-md-12">
+      		  <h1 id="welcomeMemo" class="text-center">Welcome! </br> My name is Travis Lavery, and I am a self-taught programmer and designer. This site is a window into the skills and languages that I’ve learned, as I’ve been teaching myself code. I enjoy the smooth feeling of a one-page website, so I’ve done my best to create one. </br> Enjoy!</h1>
           </div>
       	</div>
     </div>
@@ -111,7 +101,7 @@
               <div class="thumbnail box">
                 <p>1. Intro</p>
                 <p class="hidden-xs">Introduced to code</p>
-                <p id="hText1" class="hText">What first got me interested in coding was the realization that code is now a part of every aspect of our lives. From an alarm clock to a video game, everything needs code to work. I decided I want to help create things, and I love the feeling of purpose I’ve gained in the realization that given time, dedication, and good code I can literally create anything I can imagine. I’ve been working as a mail-man, walking around delivering mail for the last 2 ½ years. It is mindless work, so I’ve spent every day just thinking up ideas about this that and everything in between. About 9 months ago, a good friend gave me my first real introduction into what it was like to code, and I immediately knew that I was going to become a developer of some sort, and as soon as I could manage.</p>
+                <p id="hText1" class="hText">What first got me interested in coding was the realization that code is now a part of every aspect of our lives. From an alarm clock to a video game, everything needs code to work. I decided I want to help create things, and I love the feeling of purpose I’ve gained in the realization that given time, dedication, and good code I can literally create anything I can imagine. I’ve been working as a mail-man, walking around delivering mail for the last 2 ½ years. It is mindless work, so I’ve spent every day just thinking up ideas about this that and everything in between. A good friend gave me my first real introduction into what it was like to code, and I immediately knew that I was going to become a developer of some sort, and so I delved into the world of programming.</p>
               </div>
               </button>
             </div>
@@ -120,7 +110,7 @@
               <div class="thumbnail box">
                 <p>2. Python</p>
                 <p class="hidden-xs">My First Language</p>
-                <p id="hText3" class="hText hidden">I began by learning the basics of Python, and I really enjoy Python because it works just how it looks when you type out the code (for the most part). I created a text based game where you respond to events in the game, with my code checking to make sure that you aren’t just typing gibberish. It is a rather short game, but I learned a ton while making it.</p>
+                <p id="hText3" class="hText hidden">I began by learning the basics of Python, and I really enjoy Python because it works just how it looks when you type out the code (for the most part). I created a text based game where you respond to a guard, and give him something from your inventory to get past to an 8-ball fortune teller. It is a rather short game, but I learned a ton while making it.</p>
               </div>
               </button>
             </div>
@@ -139,7 +129,7 @@
               <div class="thumbnail box">
                 <p>4. Javascript, mySQL, GitHub</p>
                 <p class="hidden-xs">Rabbit hole</p>
-                <p id="hText5" class="hText hidden">Oh, the journey I’ve had learning Javascript. I caught on to the basics very quickly, using my knowledge from Python to help me out understanding the functions, variables, etc. I even got down the for loop! (eventually). Right away I began to learn and use jquery, because I wanted to be able to make functional sites. Randomly in the middle of learning these, I jumped over to learn mySQL and also how to use GitHub, and then I was back to javascript.</p>
+                <p id="hText5" class="hText hidden">Oh, the journey I’ve had learning Javascript. I caught on to the basics very quickly, using my knowledge from Python to help me out understanding the functions, variables, etc. I even got down the for loop! (eventually). Right away I began to learn and use jquery, because I wanted to be able to make functional sites. Randomly in the middle of learning these, I jumped over to learn mySQL and also how to use GitHub, and then I was back to Javascript.</p>
               </div>
               </button>
             </div>
@@ -148,7 +138,7 @@
               <div class="thumbnail box">
                 <p>5. Phaser.io</p>
                 <p class="hidden-xs">Made a few Games</p>
-                <p id="hText6" class="hText hidden">I learned that you could create games using javascript, which sounded like a blast, so I searched out how to do it. Phaser.io was the framework I decided on, and I proceeded to create 2 different games, though neither of them are super polished. In the past, I’ve used a graphic design program I have (Correll Draw) to create logos and the like, and I used my proficiency with that to create all the objects I needed for my games, and then brought them to life! While I enjoyed creating these games greatly, I didn’t think it was something that I wanted to do for a career. </p>
+                <p id="hText6" class="hText hidden">I learned that you could create games using Javascript, which sounded like a blast, so I searched out how to do it. Phaser.io was the framework I decided on, and I proceeded to create 2 different games, though neither of them are super polished. In the past, I’ve used a graphic design program I have (Correll Draw) to create logos and the like, and I used my proficiency with that to create all the objects I needed for my games, and then brought them to life! While I enjoyed creating these games greatly, I didn’t think it was something that I wanted to do for a career. </p>
               </div>
               </button>
             </div>
@@ -157,7 +147,7 @@
               <div class="thumbnail box">
                 <p>6. Bootstrap</p>
                 <p class="hidden-xs">Enjoying the website?</p>
-                <p id="hText7" class="hText hidden">I turned back to looking at html, css, and javascript. Next came Bootstrap, because when I was over at my friend’s house (he is a full-stack developer), he showed me a decent looking website he was using to display all his tests that he ran on his code. “I only had to code like 5 lines of css” he said passingly. I gave him that “You’re joking” look, and he told me about Bootstrap. Bootstrap is great because, well, it gives html a framework to build on, as well as some basic functionality. This website is an expression of the knowledge I’ve gained about bootstrap.</p>
+                <p id="hText7" class="hText hidden">I turned back to looking at html, css, and javascript. Next came Bootstrap, because when I was over at my friend’s house (he is a full-stack developer), he showed me a decent looking website he was using to display all his tests that he ran on his code. “I only had to code like 5 lines of css” he said passingly. I gave him that “You’re joking” look, and he told me about Bootstrap. Bootstrap is great because, well, it gives html a framework to build on, as well as some functionality. This website is an expression of the knowledge I’ve gained about bootstrap.</p>
               </div>
               </button>
             </div>
@@ -248,7 +238,7 @@
           </div>
         </div>
         <div id="section4" class='tab-pane fade row'>
-        	<h1>Future Projects</h1>
+        	<h2>Future Projects</h2>
           <ul class="list-group">
         		<li class="list-group-item box">
         			<h4 class="list-group-item-heading">Contact me Message</h4>
@@ -272,17 +262,18 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div id="resumeDiv">
-      	<div class="text-center col-sm-12">
-      		<iframe id="resumeDoc" src="http://docs.google.com/gview?url=http://travislavery.com/resume/TravisResume.pdf&embedded=true" style="width:600px; height:775px;" frameborder="0"></iframe>
-      	</div>
+    <div id="resumeDiv" class="row">
+      <div class="text-center col-sm-12">
+      	<iframe id="resumeDoc" src="http://docs.google.com/gview?url=http://travislavery.com/resume/TravisResume.pdf&embedded=true" style="width:600px; height:775px;" frameborder="0"></iframe>
       </div>
-      <div id="wordPressLink" class="row container-fluid">
-        <div class="col-xs-12">
+    </div>
+    <nav id="wordPressLink" class="row navbar navbar-static-bottom">
+      <div class="container-fluid">
+        <div class="">
           <button type="button" class="btn btn-default col-xs-12"><a href="/wordpress">WordPress designed site</a></button>
+          </div>
         </div>
-      </div>
+      </nav>
       <div id="contactDiv" class='box modal fade' tabindex="-1" role="dialog" aria-labelledby="contactMe" aria-hidden="true">
         <div class="modal-dialog modal-md">
           <div class="modal-content">
@@ -368,7 +359,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./js/bootstrap.js"></script>
     <script src='./js/main.js'></script>
-    <script src="./js/interactiveRoots.js"></script>
   </body>
 
 </html>

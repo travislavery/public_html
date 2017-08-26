@@ -7,17 +7,43 @@ body {
 	position: relative;
 }
 
-/*#backgroundPics {
-	position: static;
-	overflow: none;
-}*/
-
 .carouselPics {
 	width: 100%;
 	height: 100%;
 	overflow: none;
 	margin: 0;
 	min-width: 968px;
+}
+
+#navBtn1 {
+	border: 1px solid black;
+}
+
+#navBtn1 > span.icon-bar {
+	border: 1px solid black;
+}
+
+#navbarName {
+	color: black;
+}
+
+#navBar1tabs > li > a {
+	background-image: none;
+	background-color: white;
+	color: black;
+	margin-top:5px;
+}
+
+#navBar1tabs > li > a:hover {
+	background-image: none;
+	opacity: .8;
+}
+
+#navBar1tabs > li.active > a,
+#navBar1tabs > li.active > a:hover {
+	background-image: none;
+	text-decoration: underline;
+	top: 5px;
 }
 
 #backgroundDiv {
@@ -44,12 +70,16 @@ body {
 
 #overviewDiv, #moreAboutMeDiv, #experienceDiv, #resumeDiv {
 	padding-top: 160px;
-	padding-bottom:100px;
+	padding-bottom:150px;
 }
 
 #moreAboutMeDiv, #overviewDiv {
 	background-color: white;
 	background: white;
+}
+
+#wordPressLink {
+	padding-top: 100px;
 }
 
 #t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8 {
@@ -68,40 +98,14 @@ body {
 	padding: 0;
 }
 
-
-
 #infoArea div.row {
 	padding-bottom:0px;
 }
-/*@keyframes fadeIn {
-	0% {opacity:0;}
-	1% {opacity:.33;}
-	2% {opacity:.66;}
-	3% {opacity: 1;}
-	31%{opacity:.66;}
-	32%{opacity:.33;}
-	33%{opacity:0;}
-	34% {opacity:.33;}
-	35% {opacity:.66;}
-	36% {opacity: 1;}
-	64%{opacity:.66;}
-	65%{opacity:.33;}
-	66%{opacity:0;}
-	67% {opacity:.33;}
-	68% {opacity:.66;}
-	69% {opacity: 1;}
-	98%{opacity:.66;}
-	99%{opacity:.33;}
-	100% {opacity:0;}
-}
 
-#bg{
-	animation-name: fadeIn;
-	animation-duration: 35s;
-	animation-direction: alternate;
-	animation-iteration-count:infinite;
-	animation-timing-function: linear;
-}*/
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
 
 #gitHubPic {
 	float:none;
@@ -151,6 +155,10 @@ body {
 
 #aboutMeTabs {
 	padding-right:20px;
+}
+
+#section4 ul{
+	margin-bottom: 0;
 }
 
 #eyePic, #gitPic {
